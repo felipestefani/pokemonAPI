@@ -1,13 +1,18 @@
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { useState } from 'react';
 
 const Pagin = (props) => {
-  const {count, limit, handleEvent} = props
+  const {count, limit, setPage} = props
+  const lastPage = localStorage.getItem('@pokemon_lastPage')
+
+  const getPage = (e,value) => {
+    localStorage.setItem('@pokemon_lastPage', value)
+    setPage(value)
+  }
 
   return (
     <Stack spacing={2}>
-      <Pagination count={Math.ceil(count/limit)}  onChange={(e, value)=>handleEvent(value)} variant="outlined" shape="rounded" />
+      <Pagination count={Math.ceil(count/limit)} onChange={getPage} defaultPage={()=>Number(lastPage)} variant="outlined" shape="rounded" />
     </Stack>
   );
 }

@@ -8,7 +8,7 @@ const Pokemons = () => {
     const [pokemons, setPokemons] = useState([])
     const [loading, setLoading] = useState(false)
     const [count, setCount] = useState(0)
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(localStorage.getItem('@pokemon_lastPage'))
     const limit = 5
     const offset = (page-1)*limit
 
@@ -25,10 +25,6 @@ const Pokemons = () => {
         }
     }
 
-    const handleEvent = (page) => {
-        setPage(page)
-    }
-
     useEffect(() => {
         getPokemons()
     },[page])
@@ -41,7 +37,7 @@ const Pokemons = () => {
                         <Card pokemon={pokemon} key={pokemon.url} />
                 ))}
             </ul>}
-            <Pagin count={count} limit={limit} handleEvent={handleEvent}/>
+            <Pagin count={count} limit={limit} setPage={setPage}/>
         </div>
     )
 }

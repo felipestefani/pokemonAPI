@@ -7,9 +7,9 @@ import { CircularProgress } from "@mui/material";
 
 const PokemonDetails = () => {
     const location = useLocation()
-    const { url } = location.state
     const navigate = useNavigate()
-
+    const { url } = location.state
+    
     const [pokemonDetails, setPokemonDetails] = useState([])
     const [imgPokemon, setImgPokemon] = useState('')
     const [loading, setLoading] = useState(false)
@@ -23,10 +23,7 @@ const PokemonDetails = () => {
         } catch (error) {
             console.log(error);
         } finally {
-            setTimeout(() => {
-                setLoading(false)
-            }, 1000);
-            
+            setLoading(false)
         }
     }
 
