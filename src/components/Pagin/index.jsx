@@ -12,7 +12,7 @@ const Pagin = (props) => {
 
   return (
     <Stack spacing={2}>
-      <Pagination count={Math.ceil(count/limit)} onChange={getPage} defaultPage={()=>Number(lastPage)} variant="outlined" shape="rounded" />
+      <Pagination count={Math.ceil(count/limit)} onChange={getPage} defaultPage={()=>parseInt(lastPage)} variant="outlined" shape="rounded" />
     </Stack>
   );
 }
