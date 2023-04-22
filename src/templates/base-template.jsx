@@ -1,4 +1,3 @@
-import { dividerClasses } from "@mui/material"
 import Header from "../components/Header"
 
 const BaseTemplate = ({children}) => {
