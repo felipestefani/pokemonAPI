@@ -1,8 +1,9 @@
-import Header from "../components/Header"
+import Header from "../../components/Header"
+import styles from './styles.module.css'
 
 const BaseTemplate = ({children}) => {
     return(
-        <div>
+        <div className={styles.baseTemplateContainer}>
             <Header />
             {children}
         </div>

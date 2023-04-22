@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import BackButton from "../../components/BackButton";
 import { CircularProgress } from "@mui/material";
 import { POKEMONS } from "../../services/urls";
+import BaseTemplate from "../../templates/base-template";
 
 
 const PokemonDetails = () => {
@@ -37,11 +38,14 @@ const PokemonDetails = () => {
             {loading?
                 <CircularProgress />
                 :
-                <div>
-                    <BackButton action={()=>navigate(POKEMONS)} color={'#AAFFFF'} />
-                    <h1>{pokemonDetails.name}</h1>
-                    <img src={imgPokemon} alt={pokemonDetails.name} />
-                </div>}
+                <BaseTemplate>
+                    <div>
+                        <BackButton action={()=>navigate(POKEMONS)} color={'#AAFFFF'} />
+                        <h1>{pokemonDetails.name}</h1>
+                        <img src={imgPokemon} alt={pokemonDetails.name} />
+                    </div>
+                </BaseTemplate>
+                    }
         </div>
     )
 }

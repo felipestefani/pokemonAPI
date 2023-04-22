@@ -1,0 +1,9 @@
+
+.listContainer {
+    margin: 20px;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    justify-content: center;
+}

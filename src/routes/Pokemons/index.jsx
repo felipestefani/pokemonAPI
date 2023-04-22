@@ -3,6 +3,8 @@ import Card from "../../components/Card";
 import api from "../../services";
 import Pagin from "../../components/Pagin";
 import CircularProgress from '@mui/material/CircularProgress';
+import BaseTemplate from "../../templates/base-template";
+import styles from './styles.module.css'
 
 const Pokemons = () => {
     const [pokemons, setPokemons] = useState([])
@@ -31,13 +33,18 @@ const Pokemons = () => {
 
     return (
         <div>
-            {loading?<CircularProgress />:
-            <ul>
+            {loading?
+                <CircularProgress />
+            :
+            <BaseTemplate>
+            <ul className={`${styles.listContainer}`}>
                 {pokemons.map((pokemon) => (
                         <Card pokemon={pokemon} key={pokemon.url} />
                 ))}
-            </ul>}
+            </ul>
             <Pagin count={count} limit={limit} setPage={setPage}/>
+            </BaseTemplate>}
+            
         </div>
     )
 }
