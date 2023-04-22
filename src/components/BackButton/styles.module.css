@@ -1,0 +1,7 @@
+.back_button {
+    transition: ease-in-out .1s;
+}
+
+.back_button:hover {
+   transform: scale(1.2);
+}

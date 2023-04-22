@@ -7,6 +7,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #bfb9b9d3;
+    background-color: #ffff00;
+    color: #4c508e;
     border-radius: 15px;
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
+.card_container:hover {
+    background-color: #ffff00d3;
+    cursor: pointer;
+}
+
+.card_container:active {
+    background-color: #125363;
+    color: #ffff00;
 }

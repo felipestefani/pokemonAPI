@@ -9,9 +9,10 @@
 
 .main {
     width: 100%;
-    position: absolute;
-    top: 230px;
+    height: 100vh;
+    padding-top: 250px;
     left: 0;
     display: flex;
     justify-content: center;
+    background-color: rgb(83, 83, 239);
 }

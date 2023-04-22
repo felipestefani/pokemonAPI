@@ -42,7 +42,7 @@ const PokemonDetails = () => {
                 :
                 <div className={styles.details_container}>
                     <div className={styles.button_container}>
-                        <BackButton action={()=>navigate(POKEMONS)} color={'#000'} />
+                        <BackButton action={()=>navigate(POKEMONS)} color={'#ffff00d2'}/>
                     </div>
                     <div className={styles.pokemon_details}>
                         <h1 className={styles.pokemon_name}>{pokemonDetails.name}</h1>

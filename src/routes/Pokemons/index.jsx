@@ -43,7 +43,7 @@ const Pokemons = () => {
                 :
                 <div className={styles.container}>
                     <div className={styles.button_container}>
-                        <BackButton action={()=>navigate(HOME)} color={'#000'} />
+                        <BackButton action={()=>navigate(HOME)} color={'#ffff00d2'} />
                     </div>
                     <ul className={`${styles.listContainer}`}>
                         {pokemons.map((pokemon) => (
