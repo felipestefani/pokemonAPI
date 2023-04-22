@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Home from "./routes/Home";
 import Pokemons from "./routes/Pokemons";
 import PokemonDetails from "./routes/PokemonDetails";
+import * as routes from "./services/urls";
 
 const App = () => {
   return(
@@ -10,9 +10,9 @@ const App = () => {
     <BrowserRouter>
     {/* caso deseje utilizar um template no App, as rotas devem ficar envolvidas (ou ainda deve ser visto o melhor lugar para incluir - talvez no componente) */}
       <Routes>
-        <Route path='/pokemonAPI' element={<Home />} />
-        <Route path='/pokemons' element={<Pokemons />} />
-        <Route path='/pokemon/details' element={<PokemonDetails />} />
+        <Route path={routes.HOME} element={<Home />} />
+        <Route path={routes.POKEMONS} element={<Pokemons />} />
+        <Route path={routes.POKEMON_DETAILS} element={<PokemonDetails />} />
       </Routes>
     </BrowserRouter>
 )}
