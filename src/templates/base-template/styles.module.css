@@ -6,3 +6,12 @@
     height: 100vh;
     width: 100vw;
 }
+
+.main {
+    width: 100%;
+    position: absolute;
+    top: 230px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}

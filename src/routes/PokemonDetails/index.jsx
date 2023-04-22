@@ -40,13 +40,13 @@ const PokemonDetails = () => {
             {loading?
                 <CircularProgress style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -50%)'}} />
                 :
-                <div className={styles.detailsContainer}>
-                    <div>
-                        <BackButton action={()=>navigate(POKEMONS)} color={'#AAFFFF'} />
+                <div className={styles.details_container}>
+                    <div className={styles.button_container}>
+                        <BackButton action={()=>navigate(POKEMONS)} color={'#000'} />
                     </div>
-                    <div>
-                    <h1>{pokemonDetails.name}</h1>
-                    <img src={imgPokemon} alt={pokemonDetails.name} />
+                    <div className={styles.pokemon_details}>
+                        <h1 className={styles.pokemon_name}>{pokemonDetails.name}</h1>
+                        <img src={imgPokemon} alt={pokemonDetails.name} className={styles.image}/>
                     </div>
                 </div>}
             </BaseTemplate>

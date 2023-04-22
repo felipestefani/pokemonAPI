@@ -5,7 +5,9 @@ const BaseTemplate = ({children}) => {
     return(
         <div className={styles.baseTemplateContainer}>
             <Header />
-            {children}
+            <main className={styles.main}>
+                {children}
+            </main>
         </div>
     )
 }

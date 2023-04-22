@@ -13,7 +13,7 @@ const Home = () => {
     
     return(
         <BaseTemplate>
-            <button  className={styles.button} onClick={() => navigateAndCreate()}>Pokemons</button>
+            <button onClick={() => navigateAndCreate()}>Pokemons</button>
         </BaseTemplate>
     )
 }
