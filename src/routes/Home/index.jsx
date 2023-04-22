@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import BaseTemplate from "../../templates/base-template";
 
 
 const Home = () => {
@@ -10,7 +11,9 @@ const Home = () => {
     } )
     
     return(
-        <button onClick={() => navigateAndCreate()}>Pokemons</button>
+        <BaseTemplate>
+            <button onClick={() => navigateAndCreate()}>Pokemons</button>
+        </BaseTemplate>
     )
 }
 
