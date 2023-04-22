@@ -7,7 +7,7 @@ const Card = (props) => {
     const {pokemon} = props
 
     return (
-        <div className={`${styles.container}`}>
+        <div className={`${styles.card_container}`}>
             <button onClick={() => navigate(HOME)}>Voltar</button>
             <Link to={POKEMON_DETAILS} state={{url: pokemon.url}}>{pokemon.name}</Link>
         </div>

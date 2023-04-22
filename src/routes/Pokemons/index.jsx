@@ -11,7 +11,7 @@ const Pokemons = () => {
     const [loading, setLoading] = useState(false)
     const [count, setCount] = useState(0)
     const [page, setPage] = useState(localStorage.getItem('@pokemon_lastPage'))
-    const limit = 5
+    const limit = 10
     const offset = (page-1)*limit
 
     const getPokemons = async () => {

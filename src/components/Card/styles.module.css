@@ -1,9 +1,12 @@
 
-.container {
+.card_container {
     margin: 20px 20px;
     padding: 10px 15px;
-    width: 200px;
+    width: 180px;
+    height: 280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #bfb9b9d3;
+    border-radius: 15px;
 }
