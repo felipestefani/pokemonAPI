@@ -33,18 +33,19 @@ const Pokemons = () => {
 
     return (
         <div>
-            {loading?
-                <CircularProgress />
-            :
             <BaseTemplate>
-            <ul className={`${styles.listContainer}`}>
-                {pokemons.map((pokemon) => (
-                        <Card pokemon={pokemon} key={pokemon.url} />
-                ))}
-            </ul>
-            <Pagin count={count} limit={limit} setPage={setPage}/>
-            </BaseTemplate>}
-            
+                {loading?
+                    <CircularProgress style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -50%)'}} />
+                :
+                <div className={styles.container}>
+                    <ul className={`${styles.listContainer}`}>
+                        {pokemons.map((pokemon) => (
+                                <Card pokemon={pokemon} key={pokemon.url} />
+                        ))}
+                    </ul>
+                    <Pagin count={count} limit={limit} setPage={setPage}/>
+                </div>}
+            </BaseTemplate>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import BackButton from "../../components/BackButton";
 import { CircularProgress } from "@mui/material";
 import { POKEMONS } from "../../services/urls";
 import BaseTemplate from "../../templates/base-template";
+import styles from './styles.module.css'
 
 
 const PokemonDetails = () => {
@@ -35,17 +36,20 @@ const PokemonDetails = () => {
 
     return(
         <div>
+            <BaseTemplate>
             {loading?
-                <CircularProgress />
+                <CircularProgress style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -50%)'}} />
                 :
-                <BaseTemplate>
+                <div className={styles.detailsContainer}>
                     <div>
                         <BackButton action={()=>navigate(POKEMONS)} color={'#AAFFFF'} />
-                        <h1>{pokemonDetails.name}</h1>
-                        <img src={imgPokemon} alt={pokemonDetails.name} />
                     </div>
-                </BaseTemplate>
-                    }
+                    <div>
+                    <h1>{pokemonDetails.name}</h1>
+                    <img src={imgPokemon} alt={pokemonDetails.name} />
+                    </div>
+                </div>}
+            </BaseTemplate>
         </div>
     )
 }
