@@ -15,7 +15,7 @@ const Pokemons = () => {
     const [count, setCount] = useState(0)
     const [page, setPage] = useState(localStorage.getItem('@pokemon_lastPage'))
     const navigate = useNavigate()
-    const limit = 10
+    const limit = 100
     const offset = (page-1)*limit
 
     const getPokemons = async () => {
