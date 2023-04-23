@@ -1,6 +1,6 @@
 
 const HOME = '/pokemonAPI'
-const POKEMONS = '/pokemons'
-const POKEMON_DETAILS = '/pokemon/details'
+const POKEMONS = '/pokemonAPI/pokemons'
+const POKEMON_DETAILS = '/pokemonAPI/pokemons/details/'
 
 export {HOME, POKEMONS, POKEMON_DETAILS}
