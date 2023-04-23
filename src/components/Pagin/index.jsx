@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 
 const Pagin = (props) => {
   const {count, limit, setPage} = props
-  const lastPage = localStorage.getItem('@pokemon_lastPage')
+  const lastPage = parseInt(localStorage.getItem('@pokemon_lastPage'))
 
   const getPage = (e,value) => {
     localStorage.setItem('@pokemon_lastPage', value)
@@ -12,7 +12,7 @@ const Pagin = (props) => {
 
   return (
     <Stack spacing={2}>
-      <Pagination count={Math.ceil(count/limit)} onChange={getPage} defaultPage={()=>parseInt(lastPage)} variant="outlined" shape="rounded" />
+      <Pagination count={Math.ceil(count/limit)} onChange={getPage} defaultPage={lastPage} page={lastPage} variant="outlined" shape="rounded" />
     </Stack>
   );
 }
