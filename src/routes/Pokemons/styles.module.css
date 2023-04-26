@@ -3,8 +3,6 @@
     padding: 20px 40px 0px;
 }
 
-
-
 .listContainer {
     padding: 20px 10px;
     display: flex;
@@ -13,6 +11,7 @@
     justify-content: center;
 }
 
-.button_container:hover {
-    color: yellow;
+.button_container {
+    max-width: 1280px;
+    height: auto;
 }

@@ -39,20 +39,22 @@ const Pokemons = () => {
     return (
         <div>
             <BaseTemplate>
-                {loading ?
-                    <CircularProgress style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -50%)'}} />
-                :
                 <div className={styles.container}>
                     <div className={styles.button_container}>
-                        <BackButton action={()=>navigate(HOME)} color={'#ffff00d2'} />
+                        <BackButton action={()=>navigate(HOME)} color={'#ffff00d2'} /> 
                     </div>
-                    <ul className={`${styles.listContainer}`}>
-                        {pokemons.map((pokemon) => (
-                                <Card pokemon={pokemon} key={pokemon.url} />
-                        ))}
-                    </ul>
-                    <Pagin count={count} limit={limit} setPage={setPage}/>
-                </div>}
+                    {loading ?
+                        <CircularProgress style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -50%)'}} />
+                    :
+                    <div>
+                        <ul className={`${styles.listContainer}`}>
+                            {pokemons.map((pokemon) => (
+                                    <Card pokemon={pokemon} key={pokemon.url} />
+                            ))}
+                        </ul>
+                        <Pagin count={count} limit={limit} setPage={setPage}/>
+                    </div>}
+                </div>
             </BaseTemplate>
         </div>
     )
